@@ -1,0 +1,20 @@
+{
+  "name": "wp5-setup",
+  "version": "0.0.0",
+  "description": "basic webpack5 project setup",
+  "main": "index.js",
+  "repository": "https://github.com/davidbrekke/wp5-setup.git",
+  "author": "david magnuson",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "start": "webpack serve",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
