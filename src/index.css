@@ -1,3 +1,6 @@
 body {
-  background: plum;
+  background: url('./assets/dun-sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -8,8 +8,17 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
 
+  output: {
+    assetModuleFilename: 'assets/[hash][ext][query]',
+  },
+
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        /* alt: asset/resources or asset/inline */
+        type: 'asset',
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -19,7 +28,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            // options for importing images in css
+            options: { publicPath: '' },
+          },
+          'css-loader',
+        ],
       },
     ],
   },
