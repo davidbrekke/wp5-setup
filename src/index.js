@@ -1,14 +1,5 @@
-import "./index.css";
-const arya = {
-  type: "dog",
-  name: "arya",
-  house: "stark",
-  sword: "needle",
-};
-const jon = {
-  ...arya,
-  sword: "lock neck",
-};
+import { render } from 'react-dom'
+import App from './components/App'
+import './index.css'
 
-console.log(arya);
-console.log(jon);
+render(<App />, document.getElementById('root'))
