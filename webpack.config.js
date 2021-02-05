@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        /* alt: asset/resources or asset/inline */
+        /* asset/resources or asset/inline */
         type: 'asset',
       },
       {
